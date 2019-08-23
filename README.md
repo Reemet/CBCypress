@@ -20,7 +20,7 @@
 * Wait for Cypress to finish installing.
 
 * Run tests with: npm run webCli ( web CLI will open up Cypress UI and you can visually observe tests.)
- Cypress IO will open up and click "Run all tests"
+ When Cypress IO will open up and click "Run all tests"
   For mobile tests: npm run mobile ( might run through but have not tested right now )
  
  * to run tests headless run : npm run headless
