@@ -1,0 +1,25 @@
+{
+  "name": "coolbet",
+  "version": "1.0.0",
+  "description": "Manual and automation test tasks for new consultant applicants.",
+  "main": "index.js",
+  "scripts": {
+    "mobile": "cypress run --config viewportWidth=375,viewportHeight=667",
+    "webCli": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "headless": "cypress run --config viewportWidth=1280,viewportHeight=720"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Reemet/CBCypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reemet/CBCypress.git"
+  },
+  "homepage": "https://github.com/Reemet/CBCypress.git",
+  "devDependencies": {
+    "cypress": "^3.4.0"
+  }
+}
