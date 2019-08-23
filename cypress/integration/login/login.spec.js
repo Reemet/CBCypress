@@ -80,7 +80,7 @@ describe('Opens coolbet.ee and logs in', function()  {
 
 
         // Try logging in with wrong credentials after logging out.
-       context('Login with correct credentials', function () {
+       context('Login with incorrect credentials', function () {
             cy.get('[data-test=button-login]').click();
 
             cy.get('.login-form').should('be.visible')
@@ -103,24 +103,9 @@ describe('Opens coolbet.ee and logs in', function()  {
             cy.submit();
             
             cy.get('.login-form').should('not.contain', 'Vale e-mail või salasõna');
-            cy.logOut();
-            cy.wait(5000);
         
         });
-        context('Login with incorrect credentials after password change', function () {
-             cy.get('[data-test=button-login]').click();
-
-            cy.get('.login-form').should('be.visible')
-                .should('contain', 'Tere tulemast tagasi')
-                .find('.login-button');
-            cy.login('reemet.paabo@gmail.com', 'Huumor123');
-            // wait for relogging to prevent 401
-            cy.submit();
-            
-            cy.get('.login-form').should('not.contain', 'Vale e-mail või salasõna');
-    
-        
-        });
+     
         context('Reset password to default', function() {
             cy.openSettings('Minu Konto');
             cy.get('h2').should('contain', 'Salasõna muutmine');
